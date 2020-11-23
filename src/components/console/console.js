@@ -11,7 +11,6 @@ const Console = ({code}) => {
     useEffect(() => {
         setErrors([]);
         if(code){
-            // console.clear();
             setLogs([]);
             runCode(code);
         }
@@ -27,6 +26,7 @@ const Console = ({code}) => {
 
     return (
         <div className="console">
+            <h2 className="console-header">Console output: </h2>
             {logs.map((el, i) => <p key={"log" + i} className="message">{el}</p>)}
             {errors.map((el, i) => <p key={"e" + i} className="error">{el}</p>)}
         </div>
