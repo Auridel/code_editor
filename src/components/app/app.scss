@@ -1,0 +1,20 @@
+html, body{
+  margin: 0;
+  padding: 0;
+}
+*{
+  box-sizing: border-box;
+}
+
+.app{
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  height: 100vh;
+}
+.editor{
+  width: 50%;
+}
+.console{
+  width: 50%;
+}
