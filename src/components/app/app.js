@@ -12,8 +12,8 @@ const App = () => {
 
     return (
         <div className="app">
-            <Editor onCodeChange={onCodeChange}/>
-            <Console/>
+            <Editor value={code} onCodeChange={onCodeChange}/>
+            <Console code={code}/>
         </div>
     );
 };

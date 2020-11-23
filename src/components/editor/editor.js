@@ -4,7 +4,7 @@ import "ace-builds/src-noconflict/mode-javascript";
 import "ace-builds/src-noconflict/theme-tomorrow";
 import "ace-builds/src-noconflict/ext-language_tools";
 
-const Editor = () => {
+const Editor = ({value, onCodeChange}) => {
     return (
         <div className="editor">
             <AceEditor
@@ -13,12 +13,12 @@ const Editor = () => {
                 theme="tomorrow"
                 name="code-editor"
                 // onLoad={this.onLoad}
-                // onChange={this.onChange}
+                onChange={onCodeChange}
                 fontSize={14}
                 showPrintMargin={true}
                 showGutter={true}
                 highlightActiveLine={true}
-                value={``}
+                value={value}
                 style={{
                     width: "100%",
                     height: "100%"
